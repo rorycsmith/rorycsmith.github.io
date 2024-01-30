@@ -1,13 +1,9 @@
 ## Welcome to the homepage of Rory Smith
-This is a work in progess.  
-It will be a where I share contact info, links to projects and ideas.
+This is an markdown file   
+This is **BOLD**  
+This is *italics*  
+This is ***Both BOLD and italics***   
 ---
-
-There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
-
-
-### test are below here
-
 
 [I'm a link to a repository file](test.md)
 
