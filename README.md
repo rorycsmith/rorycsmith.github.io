@@ -9,11 +9,11 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 
 ### test are below here
 
-| Rank | Languages | test column |
-|-----:|-----------|-------------|
-|     1| JavaScript| test one    |
-|     2| Python    | asdfsadf    |
-|     3| SQL       | adsf asd    |
+| Rank | Languages | test column            |
+|-----:|-----------|------------           -|
+|     1| JavaScript| www.cnn.com            |
+|     2| Python    | https://www.cnn.com    |
+|     3| SQL       | adsf asd               |
 
 
 
