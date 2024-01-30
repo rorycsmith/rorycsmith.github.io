@@ -8,7 +8,7 @@ This is ***Both BOLD and italics***
 [I'm a link to a repository file](test.md)
 
 
-[I'm a relative reference to a repository image](test.md)
+[I'm a relative reference to a repository image](hv.jpeg)
 
 
 
