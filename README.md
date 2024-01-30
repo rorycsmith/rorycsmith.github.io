@@ -11,6 +11,8 @@ This is ***Both BOLD and italics***
 [I'm a relative reference to a repository image](hv.jpeg)
 
 Reference-style: 
+![alt text][logo]
+ 
 ![yummy][hv.jpeg]
 
 
