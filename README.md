@@ -2,7 +2,7 @@
 This is a work in progess.  (from README.md)
 It will be a where I share contact info, links to projects and ideas.
 testingSSH push
----
+
 
 There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
 
