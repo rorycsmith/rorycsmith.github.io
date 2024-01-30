@@ -18,19 +18,29 @@ Common Links:
 
 
 Financial Links:
-| Rank | Languages | test column            |
+| [CNN](https://www.cnn.com)  | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com)     |
 |-----:|-----------|------------------------|
-|     1| JavaScript| www.cnn.com            |
-|     2| Python    | https://www.cnn.com    |
-|     3| SQL       | [CNN](https://www.cnn.com)  |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
 
-
+Other:
+| [CNN](https://www.cnn.com)  | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com)     |
+|-----:|-----------|------------------------|
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
 
 
 [I'm a link to a repository file](test.md)
 
 
-[I'm a relative reference to a repository image](hv.jpeg)
+`[I'm a relative reference to a repository image](hv.jpeg)'
+
+```fhfggh```
+Code block
+```gjhgjhg```
+
 
 Reference-style: 
 ![alt text][logo]
