@@ -9,12 +9,15 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 
 ### test are below here
 
-| Rank | Languages | test column            |
+Common Links:
+| [CNN](https://www.cnn.com)  | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com)     |
 |-----:|-----------|------------------------|
-|     1| JavaScript| www.cnn.com            |
-|     2| Python    | https://www.cnn.com    |
-|     3| SQL       | [CNN](https://www.cnn.com)  |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
+|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
 
+
+Financial Links:
 | Rank | Languages | test column            |
 |-----:|-----------|------------------------|
 |     1| JavaScript| www.cnn.com            |
