@@ -9,9 +9,9 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 ### test are below here
 
 Common Links:
-| [Proton](https://mail.proton.me/u/0/inbox)  | [ChatGPT](https://chat.openai.com) | [CNN](https://www.cnn.com)     |
-|-----:|-----------|------------------------|
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
+| [Proton](https://mail.proton.me/u/0/inbox)        | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
+|---------------------------------------------------|-----------------------------------------|---------------------------------|
+|     [CNN](https://www.cnn.com)                 | [CNN](https://www.cnn.com)                   | [CNN](https://www.cnn.com)            |
 |     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
 |     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
 
