@@ -13,7 +13,7 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 |-----:|-----------|------------------------|
 |     1| JavaScript| www.cnn.com            |
 |     2| Python    | https://www.cnn.com    |
-|     3| SQL       | [link](https://www.cnn.com)  |
+|     3| SQL       | [CNN](https://www.cnn.com)  |
 
 
 
