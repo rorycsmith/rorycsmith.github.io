@@ -13,6 +13,12 @@ Common Links:
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
 
+| Item         | Price | # In stock |  xxx  |  ggg  |  fff |
+|--------------|:-----:|-----------:|-------|-------|------|
+| Juicy Apples |  1.99 |        739 | asdf  |  asdf  | adf |
+| Bananas      |  1.89 |          6 |   df   | sadf  | asdf|
+
+
 
 
 | [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
