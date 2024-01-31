@@ -8,7 +8,7 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 [Bookmarks](https://rorycsmith.github.io/bookmarks.html)
 
 ### test area below here
-
+## Straightforward listed links
 Common Links:
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
@@ -18,6 +18,7 @@ Github Links:
 Markdown Links:
 | [Mardown Land](https://markdown.land) | next
 
+### One giant markdown table for all links
 
 | Item         | Price | # In stock |  xxx  |  ggg  |  fff |
 |--------------|:-----:|-----------:|-------|-------|------|
@@ -25,6 +26,8 @@ Markdown Links:
 | Bananas      |  1.89 |          6 |   df   | sadf  | asdf|
 
 
+### Separate markdown table for category 
+(**Problem** - some links fit in differnet catogory.  **Solution** - just put links in more than one category)
 
 
 | [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
