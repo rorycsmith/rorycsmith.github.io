@@ -32,6 +32,7 @@ Financial Links:
 
 
 Other:
+
 | [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
 |:-----------------------------:|:---------------------:|:-----------------------------:|
 | [[legal]()](https://auth.mycase.com/login_sessions/new?client_id=tCEM8hNY7GaC2c8P&login_required=true&response_type=code)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
