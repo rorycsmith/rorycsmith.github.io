@@ -1,5 +1,5 @@
 ## Welcome to the homepage of Rory Smith
-This is a work in progess.  (from README.md)
+This is a work in progess.
 It will be a where I share contact info, links to projects and ideas.
 update test
 
@@ -23,7 +23,7 @@ Common Links:
 
 
 
-Financial Links:
+Financial Links:  
 | [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
 |:-----------------------------:|:---------------------:|:-----------------------------:|
 | [[legal]()](https://auth.mycase.com/login_sessions/new?client_id=tCEM8hNY7GaC2c8P&login_required=true&response_type=code)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
