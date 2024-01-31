@@ -1,6 +1,8 @@
 ## Welcome to the homepage of Rory Smith
 My email address is rwordsmith@proton.me
 
+For a look at my Resume [click here](https://docs.google.com/document/d/11qXXto9QkpGpCJ3JiBKGsioydAZwAtfTezqasg4i000/edit?usp=drive_link)
+
 |test note|
 |---------|
 | contents of note ipsum lorem |
