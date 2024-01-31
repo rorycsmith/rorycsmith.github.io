@@ -1,5 +1,7 @@
 [CNN](www.cnn.com)
 
-test file for bookmark
+test file for bookmark  
 test2
+[link](link.com)
+
 
