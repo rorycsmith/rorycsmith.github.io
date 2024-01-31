@@ -6,6 +6,9 @@ update test
 There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
 
 
+https://rorycsmith.github.io/bookmarks.html   
+[links](https://rorycsmith.github.io/bookmarks.html)
+
 ### test are below here
 
 Common Links:
