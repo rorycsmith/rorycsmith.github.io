@@ -1,5 +1,6 @@
 ## Welcome to the homepage of Rory Smith
 My email address is rwordsmith@proton.me
+
 |test note|
 |---------|
 | contents of note ipsum lore - how large can this note get?|
