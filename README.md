@@ -3,16 +3,8 @@ My email address is rwordsmith@proton.me
 
 |test note|
 |---------|
-| contents of note ipsum lore - how large can this note get?|
+| contents of note ipsum lorem |
 
-|test note|
-|---------|
-| contents of note ipsum lore - how large can this note get?                                                       asdf asdf                    asdf         asdf                      asdf                               asdf                                       asdf                                                                  asdfsdaf   |
-
-* notes
-  * note
-  * note
-    * note  
 
 ## Links
 Common Links:
