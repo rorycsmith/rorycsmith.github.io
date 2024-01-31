@@ -12,6 +12,12 @@ There is also some experimenting for formatting so don't be surpsied if some thi
 Common Links:
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
+Github Links:
+|[link](cnn.com) | 
+
+Markdown Links:
+| [Mardown Land](https://markdown.land) | next
+
 
 | Item         | Price | # In stock |  xxx  |  ggg  |  fff |
 |--------------|:-----:|-----------:|-------|-------|------|
