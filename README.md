@@ -1,11 +1,11 @@
 ## Welcome to the homepage of Rory Smith
-This is a work in progess.
-It will be a where I share contact info, links to projects and ideas.
-update test
+My email address is rwordsmith@proton.me
 
 There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
 
-[Bookmarks](https://rorycsmith.github.io/bookmarks.html)
+[Bookmarks html](https://rorycsmith.github.io/bookmarks.html)
+[Bookmarks md](bookmarks.md)
+![Bookmarks md](bookmarks.md)
 
 ### test area below here
 ## Straightforward listed links
