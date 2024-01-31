@@ -13,7 +13,7 @@ Common Links:
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
 Github Links:
-|[link](cnn.com) | 
+|[Github](github.com) | 
 
 Markdown Links:
 | [Mardown Land](https://markdown.land) | next
