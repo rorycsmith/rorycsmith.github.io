@@ -17,7 +17,7 @@ Common Links:
 
 
 
-| [Proton](https://mail.proton.me/u/0/inbox)  |          (https://chat.openai.com)           |              CNN              |
+| [Proton](https://mail.proton.me/u/0/inbox)  |          [chat](https://chat.openai.com)           |              CNN              |
 |:-----------------------------:|:---------------------:|:-----------------------------:|
 | [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
 | [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
