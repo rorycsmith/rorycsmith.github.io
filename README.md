@@ -1,13 +1,19 @@
 ## Welcome to the homepage of Rory Smith
 My email address is rwordsmith@proton.me
+|test note|
+|---------|
+| contents of note ipsum lore - how large can this note get?|
 
+|test note|
+|---------|
+| contents of note ipsum lore - how large can this note get?                                                       asdf asdf                    asdf         asdf                      asdf                               asdf                                       asdf                                                                  asdfsdaf   |
 
-| [Bookmarks](bookmarks.md) | [convert](vfxaS4YK8yaUvso8b3Pm5zfQ.md) | [private-stuff](123quirkysquirrel.md) |
+* notes
+  * note
+  * note
+    * note  
 
-
-
-### test area below here
-## Straightforward listed links
+## Links
 Common Links:
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
@@ -25,37 +31,7 @@ Markdown Links:
 | Bananas      |  1.89 |          6 |   df   | sadf  | asdf|
 
 
-### Separate markdown table for category 
-(**Problem** - some links fit in differnet catogory.  **Solution** - just put links in more than one category)
 
-
-| [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
-|:-----------------------------:|:---------------------:|:-----------------------------:|
-| [[legal]()](https://auth.mycase.com/login_sessions/new?client_id=tCEM8hNY7GaC2c8P&login_required=true&response_type=code)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-
-
-
-Financial Links:  
-
-| [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
-|:-----------------------------:|:---------------------:|:-----------------------------:|
-| [legal](https://auth.mycase.com/)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-
-
-Other:
-
-| [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
-|:-----------------------------:|:---------------------:|:-----------------------------:|
-| [legal](https://auth.mycase.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
-
-
-[Link to a repository style file](style.css)
 
 
 
