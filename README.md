@@ -2,7 +2,7 @@
 My email address is rwordsmith@proton.me
 
 
-| [Bookmarks](bookmarks.md) |  [test](test.md)  |
+| [Bookmarks](bookmarks.md) | 
 
 
 
