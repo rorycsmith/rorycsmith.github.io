@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: #333;
+    width: 100%;
+}
+
+p {
+    width: 100%;
+}
+
+.category {
+    flex: 1;
+    margin-top: 20px;
+    min-width: 300px; /* Adjust minimum width as needed */
+}
+
+.category h2 {
+    color: #666;
+}
+
+.bookmarks a {
+    display: block;
+    margin: 5px 0;
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.bookmarks a:hover {
+    text-decoration: underline;
+}
+
+.bookmarks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
