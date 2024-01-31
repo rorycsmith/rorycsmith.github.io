@@ -5,17 +5,15 @@ update test
 
 There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
 
+[Bookmarks](https://rorycsmith.github.io/bookmarks.html)
 
-https://rorycsmith.github.io/bookmarks.html   
-[links](https://rorycsmith.github.io/bookmarks.html)
-
-### test are below here
+### test area below here
 
 Common Links:  
 | [Proton Mail](https://mail.proton.me/u/0/inbox)      | [ChatGPT](https://chat.openai.com)       | [CNN](https://www.cnn.com)      |
 
 
-test
+
 
 | [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
 |:-----------------------------:|:---------------------:|:-----------------------------:|
@@ -26,34 +24,23 @@ test
 
 
 Financial Links:
-| [CNN](https://www.cnn.com)  | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com)     |
-|-----:|-----------|------------------------|
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
+| [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
+|:-----------------------------:|:---------------------:|:-----------------------------:|
+| [[legal]()](https://auth.mycase.com/login_sessions/new?client_id=tCEM8hNY7GaC2c8P&login_required=true&response_type=code)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
+| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
+| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
+
 
 Other:
-| [CNN](https://www.cnn.com)  | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com)     |
-|-----:|-----------|------------------------|
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)            |
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)    | [CNN](https://www.cnn.com)   |
-|     [CNN](https://www.cnn.com)| [CNN](https://www.cnn.com)       | [CNN](https://www.cnn.com)  |
+| [Proton](https://mail.proton.me/u/0/inbox) | [ChatGPT](https://chat.openai.com)           |              [google](https://www.google.com/)       |
+|:-----------------------------:|:---------------------:|:-----------------------------:|
+| [[legal]()](https://auth.mycase.com/login_sessions/new?client_id=tCEM8hNY7GaC2c8P&login_required=true&response_type=code)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
+| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
+| [CNN](https://www.cnn.com)     | [CNN](https://www.cnn.com) | [CNN](https://www.cnn.com) |
 
 
-[I'm a link to a repository file](test.md)
+[Link to a repository style file](style.css)
 
 
-`[I'm a relative reference to a repository image](hv.jpeg)'
-
-```fhfggh```
-Code block
-```gjhgjhg```
-
-
-Reference-style: 
-![alt text][logo]
- 
-![yummy][hv.jpeg]
-![test](https://github.com/rorycsmith/rorycsmith.github.io/blob/main/hv.jpeg)
 
 
