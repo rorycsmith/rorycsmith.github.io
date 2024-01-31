@@ -4,8 +4,10 @@ My email address is rwordsmith@proton.me
 There is also some experimenting for formatting so don't be surpsied if some things look a little weird.
 
 [Bookmarks html](https://rorycsmith.github.io/bookmarks.html)
+
 [Bookmarks md](bookmarks.md)
-![Bookmarks md](bookmarks.md)
+![Bookmarks md](https://rorycsmith.github.io/bookmarks.md)
+
 
 ### test area below here
 ## Straightforward listed links
