@@ -2,9 +2,7 @@
 My email address is rwordsmith@proton.me
 
 
-[Bookmarks html](https://rorycsmith.github.io/bookmarks.html)
-
-[Bookmarks md](bookmarks.md)
+[Bookmarks](bookmarks.md)
 
 
 
