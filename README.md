@@ -1,8 +1,9 @@
-## Welcome to the homepage of Rory Smith
-My email address is **rwordsmith@proton.me**
-
-For a look at my Resume [click here](https://docs.google.com/document/d/11qXXto9QkpGpCJ3JiBKGsioydAZwAtfTezqasg4i000/edit?usp=drive_link)
-
+Welcome to the homepage of Rory Smith  
+My email address is **rwordsmith@proton.me**  
+For a look at my Resume [click here](https://docs.google.com/document/d/11qXXto9QkpGpCJ3JiBKGsioydAZwAtfTezqasg4i000/edit?usp=drive_link)  
+#### Favorite quote:
+"Never attribute to malice that which can be adequately explained by stupidity. Never underestimate the power of human stupidity."
+-- Robert Heinlein  
 ## Summary of Resume
 ### WORK EXPERIENCE
 #### RwordSmith – Online business
@@ -30,9 +31,7 @@ Aug 1992 - May 1996
 #### University of Nevada, Las Vegas – Las Vegas, NV
 MONTH 20XX - MONTH 20XX
 
-#### Favorite quote:
-"Never attribute to malice that which can be adequately explained by stupidity. Never underestimate the power of human stupidity."
--- Robert Heinlein
+
 
 
 
