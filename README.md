@@ -1,4 +1,4 @@
-### Welcome to the homepage of Rory Smith  
+## Welcome to the homepage of Rory Smith  
 My [email](rwordsmith@proton.me) | My [Resume:](https://docs.google.com/document/d/11qXXto9QkpGpCJ3JiBKGsioydAZwAtfTezqasg4i000/edit?usp=drive_link) | My [Card](https://rorysmith.carrd.co)
 #### Favorite quote:
 "Never attribute to malice that which can be adequately explained by stupidity. Never underestimate the power of human stupidity."
