@@ -28,7 +28,7 @@ BS in Vision Science and OD doctoral degree
 Aug 1992 - May 1996
 
 #### University of Nevada, Las Vegas – Las Vegas, NV
-MONTH 20XX - MONTH 20XX
+Aug 1988 - May 1992
 
 
 
