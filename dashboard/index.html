@@ -1,1 +1,87 @@
-temporary placeholder
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <meta name="description" content="Local Start.me-style dashboard (Syncthing-friendly)" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="titleblock">
+          <div class="title">Dashboard</div>
+          <div class="sub">Local • Offline • Syncthing-friendly</div>
+        </div>
+      </div>
+
+      <div class="controls" style="flex:1 1 420px;">
+        <div class="search" title="Type to filter tiles. Press / to focus. Enter opens first match.">
+          <span aria-hidden="true">🔎</span>
+          <input id="q" type="text" placeholder="Search links… (press /)" autocomplete="off" />
+          <span class="kbdhint">/ • Enter</span>
+        </div>
+
+        <button class="btn" id="themeBtn" title="Toggle dark/light (t)">
+          <span aria-hidden="true">🌓</span><span>Theme</span><span class="pill">t</span>
+        </button>
+
+        <button class="btn" id="expandBtn" title="Expand/collapse all sections (e)">
+          <span aria-hidden="true">▦</span><span>Sections</span><span class="pill">e</span>
+        </button>
+
+        <button class="btn" id="backupBtn" title="Export settings + notes to a file">
+          <span aria-hidden="true">⤓</span><span>Export</span>
+        </button>
+      </div>
+
+      <div class="timebox">
+        <div>
+          <div class="clock" id="clock">--:--</div>
+          <div class="date" id="date">---</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+      <section class="card" aria-label="Links">
+        <div class="cardhead">
+          <h2>Links</h2>
+          <div class="meta">Edit groups/links in <code>app.js</code> (search for “DATA: groups”).</div>
+        </div>
+        <div class="cardbody">
+          <div id="results" class="results" aria-label="Search results">
+            <div class="hint" style="margin-bottom:8px;">Search results</div>
+            <div class="grid" id="resultsGrid"></div>
+          </div>
+
+          <div id="groups"></div>
+        </div>
+      </section>
+
+      <aside class="card" aria-label="Notes">
+        <div class="cardhead">
+          <h2>Quick Notes</h2>
+          <div class="meta">Autosaves locally (in your browser).</div>
+        </div>
+        <div class="cardbody">
+          <textarea id="notes" placeholder="Scratchpad…&#10;- next action&#10;- call / email&#10;- errands&#10;- reminders"></textarea>
+          <div class="smallrow">
+            <div class="hint">
+              Shortcuts: <span class="ok">/</span> search • <span class="ok">t</span> theme • <span class="ok">e</span> sections • <span class="ok">Esc</span> clear
+            </div>
+            <div class="hint" id="saveState">Saved</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
