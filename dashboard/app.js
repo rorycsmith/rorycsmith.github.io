@@ -11,6 +11,10 @@ const groups = [
   { name: "Github Page", url: "https://rorycsmith.github.io/", desc: "blog/social" },
   { name: "Github Blog", url: "https://rorycsmith.github.io/rorys_blog/", desc: "blog/social" },
   { name: "Pmail", url: "https://mail.proton.me/u/0/inbox", desc: "planning" },
+  { name: "GitDashboard", url: "https://rorycsmith.github.io/dashboard/", desc: "links" },
+  { name: "ChatGPT", url: "https://chatgpt.com/", desc: "ai" },
+  { name: "Gemini", url: "  https://gemini.google.com/app", desc: "ai" },
+
 
 ] },
 
