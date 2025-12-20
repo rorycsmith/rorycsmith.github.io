@@ -6,33 +6,34 @@
 
 const groups = [
 { name: "Common", open: true, links: [
-
-
   { name: "Github Page", url: "https://rorycsmith.github.io/", desc: "blog/social" },
   { name: "Github Blog", url: "https://rorycsmith.github.io/rorys_blog/", desc: "blog/social" },
   { name: "Pmail", url: "https://mail.proton.me/u/0/inbox", desc: "planning" },
   { name: "GitDashboard", url: "https://rorycsmith.github.io/dashboard/", desc: "links" },
   { name: "ChatGPT", url: "https://chatgpt.com/", desc: "ai" },
   { name: "Gemini", url: "  https://gemini.google.com/app", desc: "ai" },
-
-
 ] },
 
 { name: "Income", open: false, links: [
-
   { name: "Multimango", url: "https://www.multimango.com", desc: "Tasks" },
   { name: "Outlier", url: "https://outlier.ai/", desc: "Tasks" },
   { name: "Aether", url: "https://aether.ai/", desc: "Annotation" },
   { name: "DoorDash", url: "https://doordash.com/", desc: "Deliveries" }
-
 ] },
 
 { name: "Crypto", open: false, links: [
-
 { name: "Townsquare", url: "https://app.townsq.xyz/", desc: "Crypto" },
 { name: "CMC Portfolio", url: "https://coinmarketcap.com/portfolio-tracker", desc: "crypto" }
+] },
+
+{ name: "Github", open: false, links: [
+  { name: "Github", url: "https://github.com/rorycsmith/rorycsmith.github.io", desc: "Tasks" },
+  { name: "Github Page", url: "https://rorycsmith.github.io/", desc: "blog/social" },
+  { name: "Github Blog", url: "https://rorycsmith.github.io/rorys_blog/", desc: "blog/social" },
 
 ] },
+
+
 
 { name: "Utilities", open: false, links: [] },
 
