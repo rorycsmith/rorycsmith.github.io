@@ -1,8 +1,64 @@
-:root{
-  --bg:#0b0e13; --panel:#121826; --panel2:#0f1522; --text:#e8edf7; --muted:#9fb0cc;
-  --tile:#162033; --tileHover:#1b2a44; --border:#24324d; --accent:#79b8ff; --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --radius:14px; --tileRadius:12px;
+:root {
+  /* New palette (from Gig Session Checklist) */
+  --bg: #1f2420;
+  --card: #2b312b;
+  --card-soft: #333a33;
+  --accent: #c6a86b;
+  --accent-soft: #8f7750;
+  --text: #f4f1e8;
+  --muted: #b0b4aa;
+  --border: #444c44;
+  --danger: #f0997d;
+
+  /* Compatibility aliases (so your existing dashboard CSS still works) */
+  --panel: var(--card);
+  --panel2: #252b25;          /* matches the darker card blend */
+  --tile: var(--card-soft);
+  --tileHover: #3a433a;       /* slightly lighter hover */
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 14px;
+  --tileRadius: 12px;
 }
+
+/* === Hover polish (Gig theme) ===================================== */
+
+/* Links */
+a {
+  transition: background-color .12s ease, border-color .12s ease, transform .12s ease;
+}
+
+a:hover {
+  background: rgba(198,168,107,0.10); /* warm gold wash */
+  border-color: rgba(198,168,107,0.75);
+}
+
+/* If your dashboard uses "tiles" (common in your setup) */
+.tile, .link-tile, .card, .panel, .group {
+  transition: background-color .12s ease, border-color .12s ease, transform .12s ease, box-shadow .12s ease;
+}
+
+/* === Container hover (subtle, grounded) =========================== */
+
+.tile:hover,
+.link-tile:hover,
+.card:hover,
+.panel:hover,
+.group:hover {
+  background: var(--tileHover);                 /* gentle shift only */
+  border-color: rgba(198,168,107,0.25);         /* very subtle gold */
+  box-shadow: var(--shadow);                    /* no extra lift */
+  transform: none;                              /* IMPORTANT */
+}
+
+
+/* Optional: reduce "jump" for people who dislike motion */
+@media (prefers-reduced-motion: reduce) {
+  a, .tile, .link-tile, .card, .panel, .group { transition: none; }
+  .tile:hover, .link-tile:hover, .card:hover, .panel:hover, .group:hover { transform: none; }
+}
+
+
+
 [data-theme="light"]{
   --bg:#f6f7fb; --panel:#ffffff; --panel2:#f2f5ff; --text:#101828; --muted:#52637a;
   --tile:#f2f5ff; --tileHover:#e9efff; --border:#d6def0; --accent:#1a73e8; --shadow: 0 10px 24px rgba(15,23,42,.12);
