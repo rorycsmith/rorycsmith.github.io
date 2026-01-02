@@ -37,6 +37,21 @@
         <button class="btn" id="backupBtn" title="Export settings + notes to a file">
           <span aria-hidden="true">⤓</span><span>Export</span>
         </button>
+
+        <button class="btn" id="importBtn" title="Import a previous export file">
+          <span aria-hidden="true">⤒</span><span>Import</span>
+        </button>
+
+        <button class="btn" id="manageBtn" title="Toggle edit mode">
+          <span aria-hidden="true">✎</span><span>Manage</span>
+        </button>
+
+<!-- group button added -->
+        <button class="btn" id="addGroupBtn" title="Add a new group">
+          <span aria-hidden="true">＋</span><span>Group</span>
+        </button>
+<!-- group button -->
+
       </div>
 
       <div class="timebox">
@@ -51,7 +66,7 @@
       <section class="card" aria-label="Links">
         <div class="cardhead">
           <h2>Links</h2>
-          <div class="meta">Edit groups/links in <code>app.js</code> (search for “DATA: groups”).</div>
+          <div class="meta">Use <strong>Manage</strong> to add/edit groups & links (saved locally in your browser).</div>
         </div>
         <div class="cardbody">
           <div id="results" class="results" aria-label="Search results">
@@ -82,6 +97,9 @@
   </div>
 
   <script src="./app.js"></script>
+
+  <!-- Hidden file input for Import -->
+  <input id="importFile" type="file" accept="application/json" style="display:none" />
 </body>
 </html>
 

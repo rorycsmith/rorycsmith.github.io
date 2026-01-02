@@ -170,11 +170,60 @@ details[open] .chev{transform:rotate(90deg)}
   text-decoration:none;
   transition: transform .08s ease, filter .08s ease, background .08s ease;
   min-height:68px;
+  position:relative;
 }
 [data-theme="light"] .tile{border:1px solid var(--border)}
 .tile:hover{background:var(--tileHover); filter:brightness(1.05); transform:translateY(-1px)}
 .tile .name{font-weight:650; letter-spacing:.2px}
 .tile .desc{font-size:.84rem; color:var(--muted); line-height:1.25}
+
+/* === Manage mode (low-friction editing) =========================== */
+
+.btn.active{
+  border-color: rgba(198,168,107,0.75);
+  background: rgba(198,168,107,0.10);
+}
+
+.tile .tile-actions{
+  position:absolute;
+  top:8px;
+  right:8px;
+  display:none;
+  gap:6px;
+  align-items:center;
+}
+
+.manage-on .tile .tile-actions{display:flex}
+
+.iconbtn{
+  border:1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.18);
+  color: inherit;
+  border-radius:10px;
+  padding:6px 8px;
+  cursor:pointer;
+  line-height:1;
+  font-size:.95rem;
+}
+[data-theme="light"] .iconbtn{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.75);
+}
+.iconbtn:hover{filter:brightness(1.07)}
+.iconbtn.danger{border-color: rgba(240,153,125,.6)}
+
+.group-actions{
+  display:none;
+  gap:8px;
+  align-items:center;
+}
+.manage-on .group-actions{display:flex}
+
+.group-actions .mini{
+  font-size:.82rem;
+  padding:6px 10px;
+  border-radius:10px;
+}
 
 textarea{
   width:100%; min-height:180px; resize:vertical;
