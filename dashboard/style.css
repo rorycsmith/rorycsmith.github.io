@@ -73,12 +73,19 @@ body{
 }
 a{color:inherit}
 .wrap{max-width:1200px; margin:0 auto; padding:18px 14px 28px}
-header{
-  display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;
-  padding:14px 14px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
-  border:1px solid rgba(255,255,255,.08); border-radius:var(--radius);
-  backdrop-filter: blur(6px);
+
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
+
+
+
 [data-theme="light"] header{border:1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.4));}
 .brand{display:flex; align-items:center; gap:12px; min-width:260px}
 .logo{
@@ -91,7 +98,7 @@ header{
 .titleblock .title{font-weight:700; letter-spacing:.2px}
 .titleblock .sub{color:var(--muted); font-size:.88rem}
 
-.controls{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+
 .search{
   display:flex; align-items:center; gap:8px;
   background:var(--panel); border:1px solid rgba(255,255,255,.10); border-radius:12px;
