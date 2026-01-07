@@ -10,6 +10,9 @@
   --border: #444c44;
   --danger: #f0997d;
 
+  /*added jan6 rory by gpt */
+  --hover-border: rgba(198,168,107,0.25);
+
   /* Compatibility aliases (so your existing dashboard CSS still works) */
   --panel: var(--card);
   --panel2: #252b25;          /* matches the darker card blend */
@@ -254,4 +257,182 @@ textarea{
 .results.active{display:block}
 .results .grid{grid-template-columns: repeat(3, minmax(0, 1fr))}
 @media (max-width: 720px){ .results .grid{grid-template-columns: repeat(2, 1fr)} }
+
+
+
+
+/* === Subtle hover tweak (Links + Quicknotes) ======================= */
+/* Paste at END of file to override earlier hover rules */
+
+/* 1) Make tile/link hover MUCH subtler: remove "pop" (brightness + lift)
+      and use a gentle border + very slight warm wash */
+.tile{
+  transition: background-color .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.tile:hover{
+  /* keep it mostly the same color, just a faint wash */
+  background: rgba(198,168,107,0.06);
+  border-color: var(--hover-border);
+  box-shadow: 0 6px 18px rgba(0,0,0,.22); /* subtle, not "look at me" */
+  filter: none;
+  transform: none;
+}
+
+/* 2) Keep the Quicknotes OUTER box hover subtle (card/panel/group)
+      without the strong background shift */
+.card:hover,
+.panel:hover,
+.group:hover{
+  background: rgba(255,255,255,0.01); /* basically steady */
+  border-color: rgba(198,168,107,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,.30); /* your existing vibe, but not louder */
+  transform: none;
+}
+
+/* 3) Give the Quicknotes FIELD the hover/focus instead (this is what you want).
+      Works for any textarea, including Quicknotes. */
+textarea{
+  transition: border-color .12s ease, box-shadow .12s ease, background-color .12s ease;
+}
+textarea:hover{
+  border-color: rgba(198,168,107,0.35);
+  background: rgba(43,49,43,0.92); /* slightly clearer than panel */
+}
+textarea:focus{
+  border-color: rgba(198,168,107,0.55);
+  box-shadow: 0 0 0 3px rgba(198,168,107,0.14);
+  caret-color: var(--accent);
+}
+
+/* Light theme equivalents (so it still feels subtle) */
+[data-theme="light"] .tile:hover{
+  background: rgba(26,115,232,0.06);
+  border-color: rgba(26,115,232,0.22);
+  box-shadow: 0 6px 18px rgba(15,23,42,.10);
+}
+[data-theme="light"] .card:hover,
+[data-theme="light"] .panel:hover,
+[data-theme="light"] .group:hover{
+  background: rgba(255,255,255,0.00);
+  border-color: rgba(26,115,232,0.18);
+  box-shadow: 0 10px 24px rgba(15,23,42,.10);
+}
+[data-theme="light"] textarea:hover{
+  border-color: rgba(26,115,232,0.28);
+  background: rgba(255,255,255,0.92);
+}
+[data-theme="light"] textarea:focus{
+  border-color: rgba(26,115,232,0.45);
+  box-shadow: 0 0 0 3px rgba(26,115,232,0.10);
+}
+
+
+/* === Quicknotes textarea: clearer "cursor is here" signal === */
+
+/* Neutral resting state (no attention) */
+textarea{
+  background: rgba(43,49,43,0.88);
+}
+
+/* Hover = gentle acknowledgment */
+textarea:hover{
+  background: rgba(43,49,43,0.92);
+}
+
+/* Focus = unmistakable but calm */
+textarea:focus{
+  background: rgba(43,49,43,0.96);
+  border-color: rgba(198,168,107,0.55);
+  box-shadow: 0 0 0 3px rgba(198,168,107,0.14);
+}
+
+
+
+/*  test add jan 6   */
+
+[data-theme="light"] textarea{
+  background: rgba(255,255,255,0.88);
+}
+
+[data-theme="light"] textarea:hover{
+  background: rgba(255,255,255,0.94);
+}
+
+[data-theme="light"] textarea:focus{
+  background: rgba(255,255,255,0.98);
+  border-color: rgba(26,115,232,0.45);
+  box-shadow: 0 0 0 3px rgba(26,115,232,0.10);
+}
+
+
+
+
+
+/*  test add jan 6  */
+input[type="search"]{
+  -webkit-appearance: searchfield;
+}
+input[type="search"]::-webkit-search-cancel-button{
+  -webkit-appearance: searchfield-cancel-button;
+}
+
+
+/* Leave room for the native clear (×) button */
+#q{ padding-right: 32px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

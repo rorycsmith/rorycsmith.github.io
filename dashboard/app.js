@@ -99,7 +99,7 @@ let addGroupBtn;
 
 
 // Storage keys
-const GROUPS_KEY = "local_dashboard_groups_v1";
+const GROUPS_KEY = "local_dashboard_groups_personal_v1";
 
 let manage = false;
 let groups = loadGroups();
@@ -598,3 +598,50 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", init);
+
+
+
+
+
+// Esc clears the search field (keeps focus + triggers existing filtering logic)
+(() => {
+  const q = document.getElementById("q");
+  if (!q) return;
+
+  q.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (!q.value) return;
+
+    e.preventDefault();
+    q.value = "";
+    q.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
