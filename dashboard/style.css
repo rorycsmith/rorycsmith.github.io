@@ -167,10 +167,36 @@ details[open] .chev{transform:rotate(90deg)}
   display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap:10px;
+  min-height: 60px;
+  position: relative;
 }
 @media (max-width: 1100px){ .grid{grid-template-columns: repeat(3, 1fr);} }
 @media (max-width: 720px){ .grid{grid-template-columns: repeat(2, 1fr);} }
 @media (max-width: 420px){ .grid{grid-template-columns: 1fr;} }
+
+/* Empty grid placeholder (only in manage mode) */
+.manage-on .grid.empty-grid::before{
+  content: "Drop links here";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--muted);
+  font-size: 0.9rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.manage-on .grid.empty-grid{
+  border: 2px dashed rgba(198,168,107,0.25);
+  border-radius: var(--tileRadius);
+  background: rgba(198,168,107,0.05);
+}
+
+[data-theme="light"] .manage-on .grid.empty-grid{
+  border-color: rgba(26,115,232,0.25);
+  background: rgba(26,115,232,0.05);
+}
 
 .tile{
   display:flex; flex-direction:column; gap:6px;
@@ -253,10 +279,184 @@ textarea{
 .clock{font-size:1.5rem; font-weight:800; letter-spacing:.4px}
 .date{color:var(--muted); font-size:.95rem}
 
-.results{display:none; margin-top:10px}
+.results{
+  display:none;
+  margin-top:10px;
+  background: rgba(198,168,107,0.08);
+  border: 1px solid rgba(198,168,107,0.20);
+  border-radius: 12px;
+  padding: 16px;
+}
 .results.active{display:block}
 .results .grid{grid-template-columns: repeat(3, minmax(0, 1fr))}
 @media (max-width: 720px){ .results .grid{grid-template-columns: repeat(2, 1fr)} }
+
+[data-theme="light"] .results{
+  background: rgba(26,115,232,0.06);
+  border: 1px solid rgba(26,115,232,0.15);
+}
+
+/* Search result tiles have a distinct color */
+.results .tile{
+  background: rgba(198,168,107,0.12);
+  border: 1px solid rgba(198,168,107,0.25);
+}
+
+[data-theme="light"] .results .tile{
+  background: rgba(26,115,232,0.10);
+  border: 1px solid rgba(26,115,232,0.20);
+}
+
+/* Selected search result (keyboard navigation) */
+.results .tile.selected{
+  background: rgba(198,168,107,0.22);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 3px rgba(198,168,107,0.20);
+}
+
+[data-theme="light"] .results .tile.selected{
+  background: rgba(26,115,232,0.18);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+}
+
+/* Result count badge */
+.result-count{
+  color: var(--accent);
+  font-weight: 650;
+  margin-left: 8px;
+}
+
+/* Empty state */
+.empty-state{
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text);
+}
+
+/* Highlighted search terms */
+mark{
+  background: rgba(198,168,107,0.40);
+  color: var(--text);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 650;
+}
+
+[data-theme="light"] mark{
+  background: rgba(26,115,232,0.30);
+  color: var(--text);
+}
+
+/* === Drag and Drop Styles ============================================ */
+
+/* Make tiles and groups draggable when in manage mode */
+.manage-on .tile{
+  cursor: move;
+}
+
+.manage-on details.section > summary{
+  cursor: move;
+}
+
+/* Dragging state */
+.tile.dragging{
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+
+details.section.dragging{
+  opacity: 0.4;
+}
+
+/* Drop zones */
+.tile.drag-over{
+  border: 2px dashed var(--accent);
+  background: rgba(198,168,107,0.15);
+}
+
+[data-theme="light"] .tile.drag-over{
+  background: rgba(26,115,232,0.15);
+}
+
+.grid.drag-over-zone{
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+  background: rgba(198,168,107,0.08);
+  border-radius: var(--tileRadius);
+}
+
+[data-theme="light"] .grid.drag-over-zone{
+  background: rgba(26,115,232,0.08);
+}
+
+details.section.drag-over{
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+  background: rgba(198,168,107,0.08);
+}
+
+[data-theme="light"] details.section.drag-over{
+  background: rgba(26,115,232,0.08);
+}
+
+/* Collapsed group being hovered with dragged tile */
+details.section:not([open]).drag-over-tile{
+  outline: 2px dashed var(--accent);
+  outline-offset: 4px;
+  background: rgba(198,168,107,0.12);
+  animation: pulse-expand 0.6s ease-in-out;
+}
+
+[data-theme="light"] details.section:not([open]).drag-over-tile{
+  background: rgba(26,115,232,0.12);
+}
+
+@keyframes pulse-expand {
+  0%, 100% {
+    background: rgba(198,168,107,0.08);
+  }
+  50% {
+    background: rgba(198,168,107,0.16);
+  }
+}
+
+[data-theme="light"] @keyframes pulse-expand {
+  0%, 100% {
+    background: rgba(26,115,232,0.08);
+  }
+  50% {
+    background: rgba(26,115,232,0.16);
+  }
+}
+
+/* Drag handle indicator */
+.manage-on .tile::before{
+  content: "⋮⋮";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 1rem;
+  opacity: 0.5;
+  letter-spacing: -2px;
+}
+
+.manage-on .tile:hover::before{
+  opacity: 0.8;
+}
+
+/* Adjust tile content to make room for drag handle */
+.manage-on .tile .name,
+.manage-on .tile .desc{
+  margin-left: 16px;
+}
+
+/* Group drag handle */
+.manage-on details.section > summary .chev{
+  cursor: move;
+}
 
 
 
@@ -379,6 +579,281 @@ input[type="search"]::-webkit-search-cancel-button{
 
 /* Leave room for the native clear (×) button */
 #q{ padding-right: 32px; }
+
+
+/* === Modal Dialog System ============================================= */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  animation: modalFadeIn 0.2s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-box {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.25s ease;
+}
+
+[data-theme="light"] .modal-box {
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+}
+
+[data-theme="light"] .modal-header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(26, 115, 232, 0.06), rgba(255, 255, 255, 0));
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+[data-theme="light"] .modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(80vh - 140px);
+}
+
+.modal-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--panel2);
+}
+
+[data-theme="light"] .modal-footer {
+  border-top: 1px solid var(--border);
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+[data-theme="light"] .modal-btn {
+  border: 1px solid var(--border);
+}
+
+.modal-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.modal-btn:active {
+  transform: translateY(0);
+}
+
+.modal-btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.modal-btn-primary:hover {
+  filter: brightness(1.15);
+}
+
+.modal-btn-cancel {
+  color: var(--muted);
+}
+
+.modal-btn-danger {
+  background: var(--danger);
+  color: var(--bg);
+  border-color: var(--danger);
+}
+
+/* Modal Form Fields */
+
+.modal-field {
+  margin-bottom: 16px;
+}
+
+.modal-field:last-child {
+  margin-bottom: 0;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  background: var(--panel2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+[data-theme="light"] .modal-input,
+[data-theme="light"] .modal-textarea {
+  border: 1px solid var(--border);
+  background: var(--panel2);
+}
+
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(198, 168, 107, 0.15);
+}
+
+[data-theme="light"] .modal-input:focus,
+[data-theme="light"] .modal-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.10);
+}
+
+.modal-textarea {
+  resize: vertical;
+  min-height: 70px;
+  font-family: inherit;
+}
+
+.modal-hint {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Link Preview in Modal */
+
+.link-preview {
+  margin-top: 16px;
+  padding: 14px;
+  background: var(--tile);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--tileRadius);
+}
+
+[data-theme="light"] .link-preview {
+  border: 1px solid var(--border);
+}
+
+.link-preview-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.link-preview-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.link-preview-name {
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.link-preview-desc {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.25;
+}
+
+.link-preview-url {
+  font-size: 0.78rem;
+  color: var(--accent-soft);
+  word-break: break-all;
+}
 
 
 
