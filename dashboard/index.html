@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard</title>
   <meta name="description" content="Local Start.me-style dashboard (Syncthing-friendly)" />
+  <!-- Main stylesheet for layout, colors, and components -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+  <!-- Page wrapper keeps content centered and padded -->
   <div class="wrap">
+    <!-- Sticky header: branding, search, controls, clock -->
     <header>
       <div class="brand">
+        <!-- Logo + title block -->
         <div class="logo" aria-hidden="true"></div>
         <div class="titleblock">
           <div class="title">Dashboard</div>
@@ -19,47 +23,85 @@
         </div>
       </div>
 
+      <!-- Search + dropdowns + edit controls -->
       <div class="controls" style="flex:1 1 420px;">
-        <div class="search" title="Type to filter tiles. Press / to focus. Enter opens first match.">
+        <!-- Search input (keyboard: / focuses, Enter opens) -->
+        <div class="search" title="Press / to focus then Type to filter tiles.. Enter opens first match.">
           <span aria-hidden="true">🔎</span>
-          
-          
-          
           <input id="q" type="search" placeholder="Search links… (press /)" autocomplete="off" />
-          
-          
-          
           <span class="kbdhint">/ • Enter</span>
         </div>
 
-        <button class="btn" id="themeBtn" title="Toggle dark/light (t)">
-          <span aria-hidden="true">🌓</span><span>Theme</span><span class="pill">t</span>
-        </button>
+        <div class="control-separator"></div>
 
-        <button class="btn" id="expandBtn" title="Expand/collapse all sections (e)">
-          <span aria-hidden="true">▦</span><span>Sections</span><span class="pill">e</span>
-        </button>
+        <!-- View dropdown -->
+        <div class="header-group">
+          <!-- Toggle theme + expand/collapse sections -->
+          <button class="btn dropdown-trigger" id="viewDropdownBtn">
+            <span>View</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="header-dropdown">
+            <button class="dropdown-item" data-action="theme">
+              <span>🌓</span>
+              <span>Theme</span>
+              <kbd>t</kbd>
+            </button>
+            <button class="dropdown-item" data-action="expand">
+              <span>▦</span>
+              <span>Sections</span>
+              <kbd>e</kbd>
+            </button>
+            <div class="dropdown-slider">
+              <label for="tileGap">Tile gap</label>
+              <input id="tileGap" type="range" min="8" max="18" step="1" />
+              <span class="slider-value" id="tileGapValue">12px</span>
+            </div>
+            <div class="dropdown-slider">
+              <label for="tilePad">Tile padding</label>
+              <input id="tilePad" type="range" min="8" max="14" step="1" />
+              <span class="slider-value" id="tilePadValue">10px</span>
+            </div>
+          </div>
+        </div>
 
-        <button class="btn" id="backupBtn" title="Export settings + notes to a file">
-          <span aria-hidden="true">⤓</span><span>Export</span>
-        </button>
+        <!-- Data dropdown -->
+        <div class="header-group">
+          <!-- Export/import dashboard data -->
+          <button class="btn dropdown-trigger" id="dataDropdownBtn">
+            <span>Data</span>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="header-dropdown">
+            <button class="dropdown-item" data-action="export">
+              <span>⤓</span>
+              <span>Export</span>
+            </button>
+            <button class="dropdown-item" data-action="import">
+              <span>⤒</span>
+              <span>Import</span>
+            </button>
+          </div>
+        </div>
 
-        <button class="btn" id="importBtn" title="Import a previous export file">
-          <span aria-hidden="true">⤒</span><span>Import</span>
-        </button>
+        <div class="control-separator"></div>
 
-        <button class="btn" id="manageBtn" title="Toggle edit mode">
-          <span aria-hidden="true">✎</span><span>Manage</span>
-        </button>
+        <!-- Edit controls -->
+        <div class="control-group">
+          <!-- Manage mode enables drag/drop + edit buttons -->
+          <button class="btn" id="manageBtn" title="Toggle edit mode">
+            <span aria-hidden="true">✎</span><span>Manage</span>
+          </button>
 
-<!-- group button added -->
-        <button class="btn" id="addGroupBtn" title="Add a new group">
-          <span aria-hidden="true">＋</span><span>Group</span>
-        </button>
-<!-- group button -->
+          <!-- Add group button (shown only in manage mode) -->
+          <button class="btn" id="addGroupBtn" title="Add a new group">
+            <span aria-hidden="true">＋</span><span>Group</span>
+          </button>
+        </div>
 
       </div>
 
+      <!-- Live clock/date -->
       <div class="timebox">
         <div>
           <div class="clock" id="clock">--:--</div>
@@ -68,6 +110,7 @@
       </div>
     </header>
 
+    <!-- Two-column layout: links + quick notes -->
     <div class="row">
       <section class="card" aria-label="Links">
         <div class="cardhead">
@@ -75,6 +118,7 @@
           <div class="meta">Use <strong>Manage</strong> to add/edit groups & links (saved locally in your browser).</div>
         </div>
         <div class="cardbody">
+          <!-- Search results panel (hidden until search is active) -->
           <div id="results" class="results" aria-label="Search results">
             <div class="hint" style="margin-bottom:8px;">
               <span>Search results</span>
@@ -91,6 +135,7 @@
             </div>
           </div>
 
+          <!-- Groups and tiles are rendered here by app.js -->
           <div id="groups"></div>
         </div>
       </section>
@@ -98,10 +143,15 @@
       <aside class="card" aria-label="Notes">
         <div class="cardhead">
           <h2>Quick Notes</h2>
-          <div class="meta">Autosaves locally (in your browser).</div>
+          <div class="cardhead-actions">
+            <div class="meta">Autosaves locally (in your browser).</div>
+            <button class="btn small" id="togglePreviewBtn" type="button">Markdown View</button>
+          </div>
         </div>
         <div class="cardbody">
+          <!-- Notes textarea + markdown preview (one pane at a time) -->
           <textarea id="notes" placeholder="Scratchpad…&#10;- next action&#10;- call / email&#10;- errands&#10;- reminders"></textarea>
+          <div id="notesPreview" class="markdown" style="display:none;"></div>
           <div class="smallrow">
             <div class="hint">
               Shortcuts: <span class="ok">/</span> search • <span class="ok">t</span> theme • <span class="ok">e</span> sections • <span class="ok">Esc</span> clear
@@ -116,13 +166,16 @@
   <!-- Modal Container -->
   <div id="modalOverlay" class="modal-overlay">
     <div id="modalBox" class="modal-box">
+      <!-- Modal header/title + close button -->
       <div class="modal-header">
         <h3 id="modalTitle">Modal Title</h3>
         <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
       </div>
+      <!-- Modal body is filled dynamically -->
       <div class="modal-body" id="modalBody">
         <!-- Dynamic content goes here -->
       </div>
+      <!-- Modal footer buttons (confirm/cancel) -->
       <div class="modal-footer" id="modalFooter">
         <button class="modal-btn modal-btn-cancel" id="modalCancel" type="button">Cancel</button>
         <button class="modal-btn modal-btn-primary" id="modalConfirm" type="button">Confirm</button>
@@ -130,10 +183,10 @@
     </div>
   </div>
 
+  <!-- Main application logic -->
   <script src="./app.js"></script>
 
   <!-- Hidden file input for Import -->
   <input id="importFile" type="file" accept="application/json" style="display:none" />
 </body>
 </html>
-
